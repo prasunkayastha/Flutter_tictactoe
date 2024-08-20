@@ -76,8 +76,7 @@ class _HomePageState extends State<HomePage> {
         displayExoh[0] == displayExoh[8] &&
         displayExoh[0] != '') {
       _showWinDialog(displayExoh[0]);
-    }
-    else if(filledBoxes==9){
+    } else if (filledBoxes == 9) {
       _showDrawDialog();
     }
   }
@@ -88,7 +87,7 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Draw'),
+            title: const Text('Draw'),
             actions: [
               FloatingActionButton(
                 onPressed: () {
@@ -101,6 +100,7 @@ class _HomePageState extends State<HomePage> {
           );
         });
   }
+
   void _showWinDialog(String winner) {
     showDialog(
         barrierDismissible: false,
@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
         displayExoh[i] = '';
       }
     });
-    filledBoxes=0;
+    filledBoxes = 0;
   }
 
   @override
